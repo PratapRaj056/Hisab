@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "893691504290",
+    "firebase_url": "https://hisab-5e70a.firebaseio.com",
+    "project_id": "hisab-5e70a",
+    "storage_bucket": "hisab-5e70a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893691504290:android:13552e50c304c7c8",
+        "android_client_info": {
+          "package_name": "darkeagle.prs.hisab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893691504290-e2kbt84l14paifkb65ijgi8qmt0774ou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "darkeagle.prs.hisab",
+            "certificate_hash": "30c5f86744eb5ab1e3598b135f688f921ef1294d"
+          }
+        },
+        {
+          "client_id": "893691504290-100ebicveu86s6cifvvslbgn8d5ugvfu.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "893691504290-100ebicveu86s6cifvvslbgn8d5ugvfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAelMetgfyYONBvw2FvjXp0kbQYm76MpXY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893691504290-100ebicveu86s6cifvvslbgn8d5ugvfu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
