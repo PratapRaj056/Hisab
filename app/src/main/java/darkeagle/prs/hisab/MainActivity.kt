@@ -79,7 +79,14 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "Value is: " + value!!)
 
                 amount = value
-                setAmountValue()
+
+                val amt = String.format("%.2f", amount)
+
+                amountTV.text = amt
+                amountET.setText("")
+
+
+                reasonET.setText("")
             }
 
             override fun onCancelled(error: DatabaseError) {
