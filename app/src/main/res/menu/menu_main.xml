@@ -9,4 +9,9 @@
         android:id="@+id/disconnect"
         android:orderInCategory="101"
         android:title="Disconnect" />
+
+    <item
+        android:id="@+id/reset"
+        android:orderInCategory="101"
+        android:title="Reset" />
 </menu>

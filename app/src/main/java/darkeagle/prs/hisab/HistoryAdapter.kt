@@ -35,7 +35,7 @@ class HistoryAdapter(private val context: Context, val historyView: HistoryView,
 
             itemView.amount.text = history.amount.toString()
             itemView.reason.text = history.reason
-            itemView.user.text = history.user
+            itemView.user.text = history.user.substring(0, history.user.indexOf('@'))
             itemView.time.text = history.time
 
             itemView.delete.setOnClickListener {

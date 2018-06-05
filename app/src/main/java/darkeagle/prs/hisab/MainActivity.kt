@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
     private fun addHistory(amount: String, reason: String, isAdded: Boolean) {
         val map = HashMap<String, Any>()
         map["user"] = mAuth.currentUser!!.email!!
-        map["time"] = SimpleDateFormat("dd-MMM-yyyy hh:mm:ss a", Locale.getDefault()).format(Date())
+        map["time"] = SimpleDateFormat("dd-MM-yy hh:mm:ss a", Locale.getDefault()).format(Date())
 
         if (isAdded) {
             map["amount"] = amount
@@ -241,6 +241,11 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.disconnect -> {
                 revokeAccess()
+                true
+            }
+            R.id.reset -> {
+                amountReference.setValue(0.0)
+                historyReference.removeValue()
                 true
             }
             else -> super.onOptionsItemSelected(item)

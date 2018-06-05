@@ -50,7 +50,7 @@ class HistoryActivity : AppCompatActivity(), HistoryView {
 
                     Log.d(TAG, "Value $values")
 
-                    values.forEach { key, value ->
+                    for ((key, value) in values) {
                         Log.d(TAG, "$key = $value")
                         val map = value as Map<String, String>
 
