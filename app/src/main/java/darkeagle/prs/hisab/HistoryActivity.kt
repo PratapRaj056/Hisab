@@ -1,6 +1,7 @@
 package darkeagle.prs.hisab
 
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MenuItem
@@ -37,6 +38,7 @@ class HistoryActivity : AppCompatActivity(), HistoryView {
 
     private fun initialise() {
         recycler_view.setHasFixedSize(true)
+
 
         // Read from the database
         historyReference.addValueEventListener(object : ValueEventListener {
@@ -100,9 +102,21 @@ class HistoryActivity : AppCompatActivity(), HistoryView {
     }
 
     override fun deleteHistory(history: History) {
-        historyReference.child(history.key).removeValue()
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Delete?")
+        builder.setMessage("Do you want to delete entry \"${history.reason}\" with amount ₹ ${history.amount} ?")
+        builder.setCancelable(false)
+        builder.setPositiveButton("Yes", { dialog, _ ->
+            historyReference.child(history.key).removeValue()
 
-        val amount = title.toString().toDouble() - history.amount
-        amountReference.setValue(amount)
+            val amount = title.toString().toDouble() - history.amount
+            amountReference.setValue(amount)
+
+            dialog.dismiss()
+        })
+        builder.setNegativeButton("No", { dialog, _ ->
+            dialog.dismiss()
+        })
+        builder.show()
     }
 }

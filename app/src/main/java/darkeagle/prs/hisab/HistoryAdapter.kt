@@ -33,7 +33,7 @@ class HistoryAdapter(private val context: Context, val historyView: HistoryView,
                 itemView.amount.setTextColor(Color.RED)
             }
 
-            itemView.amount.text = history.amount.toString()
+            itemView.amount.text = "${history.amount}"
             itemView.reason.text = history.reason
             itemView.user.text = history.user.substring(0, history.user.indexOf('@'))
             itemView.time.text = history.time

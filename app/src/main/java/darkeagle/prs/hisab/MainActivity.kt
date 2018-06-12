@@ -1,6 +1,7 @@
 package darkeagle.prs.hisab
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.support.annotation.Nullable
 import android.support.v7.app.AppCompatActivity
@@ -82,7 +83,11 @@ class MainActivity : AppCompatActivity() {
 
                 val amt = String.format("%.2f", amount)
 
-                amountTV.text = amt
+                val rnd = Random()
+                val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+                amountTV.setTextColor(color)
+
+                amountTV.text = "₹ $amt"
                 amountET.setText("")
 
 
@@ -126,11 +131,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setAmountValue() {
+        val rnd = Random()
+        val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+        amountTV.setTextColor(color)
+
         val amt = String.format("%.2f", amount)
 
         amountReference.setValue(amount)
 
-        amountTV.text = amt
+        amountTV.text = "₹ $amt"
         amountET.setText("")
 
 
